@@ -1,7 +1,7 @@
-# Sample websites
+# Sites by Ryan: sample websites
 
-Three sample websites for fictional Tuscaloosa businesses, as a web design
-portfolio:
+Three sample websites for fictional Tuscaloosa businesses, as the portfolio
+for Sites by Ryan:
 
 - `barbershop/`: Ledger & Lather Barber Co.
 - `restaurant/`: Kettle & Cane, a Southern kitchen
@@ -29,13 +29,12 @@ Every illustration was drawn for these sites as SVG code. No photos, stock
 images or icon sets from anywhere else are used, so there is nothing to
 license. Fonts are the visitor's own system fonts.
 
-## Your business name
+## The Sites by Ryan name
 
-Open `studio.js` and fill in `name` (and `url`, if you have a site). Every
-footer then shows "Website by ...", and the portfolio page shows the name.
-While it's empty, that line stays hidden.
+Every footer begins "A Sites by Ryan sample website.", and the portfolio page
+carries the name, written into the pages themselves.
 
 ## Built for speed
 
-Each site is a single HTML file with its styles and script inside it, plus the
-tiny `studio.js`. No frameworks, web fonts, trackers or outside requests.
+Each site is a single HTML file with its styles and script inside it. No
+frameworks, web fonts, trackers or outside requests.
