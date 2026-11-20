@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ledger &amp; Lather Barber Co. · Barbershop in Tuscaloosa, AL</title>
+<meta name="description" content="Classic cuts, skin fades, beard trims and hot-towel shaves in Tuscaloosa. Walk-ins welcome, or book a chair online.">
+<!-- A sample site for a fictional business: kept out of search results. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16181b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316181b'/%3E%3Cpath d='M22 18v28h20' fill='none' stroke='%23c9974a' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#16181b;--ink-2:#202328;--cream:#f6f1e9;--paper:#fffdf9;--brass:#c9974a;--brass-dark:#865a1a;--text:#1d1f23;--muted:#5a5e65;--line:#e5ddd0;--radius:14px;--max:1120px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--paper)}
+h1,h2,h3{font-family:Rockwell,"Rockwell Nova","Roboto Slab","Museo Slab",Georgia,serif;line-height:1.12;margin:0 0 .5em;letter-spacing:.005em}
+h1{font-size:clamp(2.3rem,6vw,4rem)}
+h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.wrap{width:min(100% - 32px,var(--max));margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--brass);color:var(--ink);padding:8px 14px;border-radius:8px;z-index:100;font-weight:700}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.eyebrow{font:700 .78rem/1 system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-dark);margin-bottom:14px}
+.dark .eyebrow{color:var(--brass)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--brass);color:var(--ink)}
+.btn-primary:hover{background:#d8a85c}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+.btn svg{width:18px;height:18px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(22,24,27,.97);color:#fff;border-bottom:1px solid #2b2f35}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Rockwell,"Roboto Slab",Georgia,serif;font-size:1.15rem;letter-spacing:.02em}
+.logo b{color:var(--brass);font-weight:400}
+.logo svg{width:34px;height:34px}
+.site-nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.site-nav a{text-decoration:none;color:#d9d6d0;font-weight:600;font-size:.95rem}
+.site-nav a:hover{color:#fff}
+.header-cta{display:flex;align-items:center;gap:14px}
+.header-cta .phone{color:#fff;text-decoration:none;font-weight:600;white-space:nowrap}
+.nav-toggle{display:none;background:none;border:1px solid #3a3f46;color:#fff;border-radius:10px;width:46px;height:46px;cursor:pointer}
+.nav-toggle svg{width:22px;height:22px;margin:auto}
+
+/* Hero */
+.hero{background:var(--ink);color:#f3efe8;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(201,151,74,.05) 0 2px,transparent 2px 22px)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:84px 0 92px}
+.hero p.lead{font-size:1.18rem;color:#cfcac2;max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 26px}
+.status{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:#e8e3da;background:#22252a;border:1px solid #33373e;padding:8px 14px;border-radius:999px;font-size:.95rem}
+.status i{width:10px;height:10px;border-radius:50%;background:#8b8f96;display:inline-block}
+.status.open i{background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.18)}
+.hero-art{max-width:400px;justify-self:center;width:100%}
+.facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:22px;color:#bdb8af;font-size:.95rem;padding:0;list-style:none}
+.facts li::before{content:"✦ ";color:var(--brass)}
+
+/* Sections */
+section{padding:84px 0}
+.section-head{max-width:640px;margin-bottom:40px}
+.section-head p:not(.eyebrow){color:var(--muted);font-size:1.08rem}
+.cream{background:var(--cream)}
+.dark{background:var(--ink);color:#f3efe8}
+.dark .section-head p:not(.eyebrow){color:#bdb8af}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.service{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:grid;grid-template-columns:1fr auto;gap:4px 16px}
+.service h3{margin:0}
+.service .price{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-size:1.35rem;color:var(--brass-dark)}
+.service p{grid-column:1/-1;margin:0;color:var(--muted)}
+.service .time{grid-column:1/-1;font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7b7f86}
+.services-note{margin-top:24px;color:var(--muted)}
+
+/* Barbers */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.barber{background:var(--ink-2);border:1px solid #2f333a;border-radius:var(--radius);padding:26px}
+.barber svg{width:72px;height:72px;margin-bottom:16px}
+.barber p{color:#bdb8af;margin:0}
+.barber .chair{color:var(--brass);font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+
+/* Hours + visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.hours{width:100%;border-collapse:collapse}
+.hours th,.hours td{padding:10px 0;border-bottom:1px solid var(--line);text-align:left}
+.hours td{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today th,.hours tr.today td{color:var(--brass-dark);font-weight:800}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.contact-list{list-style:none;padding:0;margin:0 0 22px}
+.contact-list li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.contact-list li:last-child{border-bottom:0}
+.contact-list svg{width:22px;height:22px;flex:none;color:var(--brass-dark);margin-top:2px}
+.contact-list a{font-weight:700}
+
+/* Booking form */
+.book-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.book-points{list-style:none;padding:0;margin:24px 0 0}
+.book-points li{padding:8px 0 8px 30px;position:relative;color:#d9d4cc}
+.book-points li::before{content:"";position:absolute;left:0;top:15px;width:16px;height:9px;border-left:3px solid var(--brass);border-bottom:3px solid var(--brass);transform:rotate(-45deg)}
+form.booking{background:var(--paper);color:var(--text);border-radius:18px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-weight:700;font-size:.92rem}
+label small{font-weight:500;color:var(--muted)}
+input,select,textarea{font:inherit;color:var(--text);background:#fff;border:1.5px solid #cfc6b7;border-radius:10px;padding:12px 14px;min-height:48px;width:100%}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--brass-dark);outline:3px solid rgba(201,151,74,.35);outline-offset:0}
+form .btn{grid-column:1/-1;justify-self:start}
+.form-status{grid-column:1/-1;background:#eef7ee;border:1px solid #b7dcb9;color:#1f4d24;border-radius:10px;padding:14px 16px;margin:0}
+.fineprint{grid-column:1/-1;font-size:.85rem;color:var(--muted);margin:0}
+
+/* FAQ */
+.faq{max-width:780px}
+details{border-bottom:1px solid var(--line);padding:6px 0}
+summary{cursor:pointer;font-weight:700;font-size:1.08rem;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--brass-dark)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:0 0 14px}
+
+/* Footer */
+.site-footer{background:#0f1113;color:#bdb8af;padding:56px 0 32px;font-size:.95rem}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;margin-bottom:36px}
+.site-footer h3{color:#fff;font-size:1.05rem}
+.site-footer a{color:#e8e3da}
+.sample-note{border-top:1px solid #2b2f35;padding-top:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.sample-note strong{color:var(--brass)}
+[data-studio-credit][hidden]{display:none}
+
+/* Sticky call/book bar on phones */
+.mobile-cta{display:none}
+
+@media (max-width:900px){
+  .hero-grid,.book-grid,.visit{grid-template-columns:1fr}
+  .hero-grid{padding:56px 0 64px;gap:28px}
+  .hero-art{max-width:220px;justify-self:start}
+  .team{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .nav-toggle{display:grid}
+  .header-cta .phone,.header-cta .btn{display:none}
+  .site-nav{position:absolute;top:100%;left:0;right:0;background:var(--ink);border-bottom:1px solid #2b2f35;display:none}
+  .site-nav.open{display:block}
+  .site-nav ul{flex-direction:column;gap:0;padding:8px 16px 16px}
+  .site-nav a{display:block;padding:14px 4px;font-size:1.05rem;border-bottom:1px solid #26292e}
+  .services{grid-template-columns:1fr}
+  form.booking{grid-template-columns:1fr;padding:22px}
+  section{padding:64px 0}
+  .footer-grid{grid-template-columns:1fr}
+  .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,17,19,.97);border-top:1px solid #2b2f35}
+  .mobile-cta .btn{flex:1;min-height:50px}
+  .mobile-cta .btn-ghost{color:#fff}
+  body{padding-bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="#top" aria-label="Ledger and Lather Barber Co., home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#c9974a" stroke-width="2"/><path d="M14 11v18h12" fill="none" stroke="#c9974a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Ledger <b>&amp;</b> Lather</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#barbers">Barbers</a></li>
+        <li><a href="#visit">Hours &amp; location</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a class="phone" href="tel:+12055550142">(205) 555-0142</a>
+      <a class="btn btn-primary" href="#book">Book a chair</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Barbershop · Downtown Tuscaloosa</p>
+        <h1>Sharp cuts. Hot towels. No rush.</h1>
+        <p class="lead">Classic cuts, skin fades, beard work and straight-razor shaves from barbers who take their time. Walk in, or book a chair and skip the wait.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#book">Book a chair</a>
+          <a class="btn btn-ghost" href="tel:+12055550142">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+            Call (205) 555-0142</a>
+        </div>
+        <p class="status" data-open-status><i></i><span>Tue–Fri 9 am–7 pm · Sat 8 am–4 pm</span></p>
+        <ul class="facts">
+          <li>Walk-ins welcome</li>
+          <li>Kids' cuts</li>
+          <li>Free parking behind the shop</li>
+        </ul>
+      </div>
+      <svg class="hero-art" viewBox="0 0 400 400" role="img" aria-label="Ledger and Lather badge with crossed scissors">
+        <defs>
+          <path id="arcTop" d="M 78 200 A 122 122 0 0 1 322 200"/>
+          <path id="arcBottom" d="M 62 200 A 138 138 0 0 0 338 200"/>
+        </defs>
+        <circle cx="200" cy="200" r="182" fill="#1d2024" stroke="#c9974a" stroke-width="3"/>
+        <circle cx="200" cy="200" r="166" fill="none" stroke="#c9974a" stroke-width="1" stroke-dasharray="2 6"/>
+        <circle cx="200" cy="200" r="104" fill="none" stroke="#3a3f46" stroke-width="1.5"/>
+        <text font-family="Rockwell, Georgia, serif" font-size="25" letter-spacing="5" fill="#e9e2d5"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">LEDGER &amp; LATHER</textPath></text>
+        <text font-family="Rockwell, Georgia, serif" font-size="17" letter-spacing="4" fill="#c9974a"><textPath href="#arcBottom" startOffset="50%" text-anchor="middle">BARBER CO. · TUSCALOOSA</textPath></text>
+        <g fill="#c9974a">
+          <path d="M60 194l5 6-5 6-5-6z"/><path d="M340 194l5 6-5 6-5-6z"/>
+        </g>
+        <g transform="translate(200 212)" stroke="#c9974a" stroke-linecap="round" fill="none">
+          <path d="M0 0 L-44 -92" stroke-width="9"/>
+          <path d="M0 0 L44 -92" stroke-width="9"/>
+          <path d="M0 0 L-44 -92" stroke="#1d2024" stroke-width="2"/>
+          <path d="M0 0 L22 34" stroke-width="7"/>
+          <path d="M0 0 L-22 34" stroke-width="7"/>
+          <circle cx="-30" cy="50" r="17" stroke-width="6"/>
+          <circle cx="30" cy="50" r="17" stroke-width="6"/>
+          <circle cx="0" cy="0" r="5" fill="#e9e2d5" stroke="none"/>
+        </g>
+        <text x="200" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" letter-spacing="4" fill="#8f8a82">EST. 2019</text>
+      </svg>
+    </div>
+  </div>
+
+  <section id="services" class="cream" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; prices</p>
+        <h2 id="services-title">Every cut ends with a hot towel</h2>
+        <p>Prices include a neck shave and styling. Cash and cards both welcome; tips can go on the card.</p>
+      </div>
+      <div class="services">
+        <article class="service"><h3>Classic cut</h3><span class="price">$28</span><p>Scissors or clippers, cut to suit how you wear it, finished with a hot towel and style.</p><span class="time">30 min</span></article>
+        <article class="service"><h3>Skin fade</h3><span class="price">$32</span><p>A clean fade down to the skin, blended by hand, with a sharp line-up.</p><span class="time">40 min</span></article>
+        <article class="service"><h3>Cut &amp; beard</h3><span class="price">$45</span><p>Any cut plus a full beard shape-up, hot towel and beard oil.</p><span class="time">50 min</span></article>
+        <article class="service"><h3>Hot-towel straight-razor shave</h3><span class="price">$35</span><p>Pre-shave oil, two hot towels, a straight-razor shave and a cool finish.</p><span class="time">40 min</span></article>
+        <article class="service"><h3>Beard trim &amp; line-up</h3><span class="price">$18</span><p>Trimmed, shaped and lined up with a razor edge.</p><span class="time">20 min</span></article>
+        <article class="service"><h3>Kids' cut <small>(12 and under)</small></h3><span class="price">$20</span><p>Patient barbers, a booster seat, and a lollipop on the way out.</p><span class="time">25 min</span></article>
+      </div>
+      <p class="services-note">Over 65? Any cut is $22, Tuesday to Thursday.</p>
+    </div>
+  </section>
+
+  <section id="barbers" class="dark" aria-labelledby="barbers-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The chairs</p>
+        <h2 id="barbers-title">Three barbers, one standard</h2>
+        <p>Ask for someone by name when you book, or take the first free chair.</p>
+      </div>
+      <div class="team">
+        <article class="barber">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="35" fill="#2b2f35" stroke="#c9974a"/><text x="36" y="45" text-anchor="middle" font-family="Rockwell, Georgia, serif" font-size="26" fill="#c9974a">MO</text></svg>
+          <p class="chair">Chair one</p><h3>Marcus O.</h3><p>Fades and tapers. Owner, and the one who keeps the ledger.</p>
+        </article>
+        <article class="barber">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="35" fill="#2b2f35" stroke="#c9974a"/><text x="36" y="45" text-anchor="middle" font-family="Rockwell, Georgia, serif" font-size="26" fill="#c9974a">DR</text></svg>
+          <p class="chair">Chair two</p><h3>Dee R.</h3><p>Scissor cuts, longer styles and kids who don't like sitting still.</p>
+        </article>
+        <article class="barber">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="35" fill="#2b2f35" stroke="#c9974a"/><text x="36" y="45" text-anchor="middle" font-family="Rockwell, Georgia, serif" font-size="26" fill="#c9974a">TJ</text></svg>
+          <p class="chair">Chair three</p><h3>Tony J.</h3><p>Beards and straight-razor shaves. Ask him about the hot towels.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2 id="visit-title">Come by the shop</h2>
+      </div>
+      <div class="visit">
+        <div class="card">
+          <h3>Opening hours</h3>
+          <table class="hours" data-hours aria-label="Opening hours">
+            <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>9 am – 7 pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>9 am – 7 pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>9 am – 7 pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>9 am – 7 pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>8 am – 4 pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Find us</h3>
+          <ul class="contact-list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg><span>214 Copperhill Street<br>Tuscaloosa, AL 35401</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg><a href="tel:+12055550142">(205) 555-0142</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><a href="mailto:chair@ledgerandlather.example">chair@ledgerandlather.example</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11v6h-2v2h-2v-2H9v2H7v-2H5z" fill="currentColor"/></svg><span>Free parking in the lot behind the shop; the back door opens straight into the waiting area.</span></li>
+          </ul>
+          <a class="btn btn-primary" href="#book">Book a chair</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="dark" aria-labelledby="book-title">
+    <div class="wrap book-grid">
+      <div>
+        <p class="eyebrow">Book online</p>
+        <h2 id="book-title">Pick a time, skip the wait</h2>
+        <p>Tell us what you're after and when suits you. We'll text to confirm within the hour while the shop is open.</p>
+        <ul class="book-points">
+          <li>Your chair is held for 10 minutes past your time</li>
+          <li>Need to cancel? A text is all it takes</li>
+          <li>Walk-ins always welcome when a chair is free</li>
+        </ul>
+      </div>
+      <form class="booking" data-sample-form>
+        <div class="field"><label for="b-name">Name</label><input id="b-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="b-phone">Mobile number <small>(for the text)</small></label><input id="b-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        <div class="field"><label for="b-service">Service</label>
+          <select id="b-service" name="service" required>
+            <option value="">Choose a service</option>
+            <option>Classic cut · $28</option><option>Skin fade · $32</option><option>Cut &amp; beard · $45</option>
+            <option>Hot-towel shave · $35</option><option>Beard trim &amp; line-up · $18</option><option>Kids' cut · $20</option>
+          </select></div>
+        <div class="field"><label for="b-barber">Barber</label>
+          <select id="b-barber" name="barber"><option>First free chair</option><option>Marcus</option><option>Dee</option><option>Tony</option></select></div>
+        <div class="field"><label for="b-date">Day</label><input id="b-date" name="date" type="date" required></div>
+        <div class="field"><label for="b-time">Time</label>
+          <select id="b-time" name="time" required>
+            <option value="">Choose a time</option>
+            <option>Morning (opening to noon)</option><option>Early afternoon (noon to 3)</option><option>Late afternoon (3 to close)</option>
+          </select></div>
+        <div class="field full"><label for="b-notes">Anything we should know? <small>(optional)</small></label><textarea id="b-notes" name="notes" placeholder="Bringing a photo of the cut you want? Mention it here."></textarea></div>
+        <button class="btn btn-primary" type="submit">Request my chair</button>
+        <p class="form-status" role="status" tabindex="-1" hidden></p>
+        <p class="fineprint">We only use your number to confirm this booking.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq" class="cream" aria-labelledby="faq-title">
+    <div class="wrap faq">
+      <div class="section-head">
+        <p class="eyebrow">Good to know</p>
+        <h2 id="faq-title">Questions we get a lot</h2>
+      </div>
+      <details><summary>Do I need to book?</summary><p>No. Walk-ins are welcome whenever a chair is free. Booking just means you won't wait, which helps most on Saturdays.</p></details>
+      <details><summary>How do I pay?</summary><p>Cash or any major card, including tap to pay. Tips can go on the card.</p></details>
+      <details><summary>Do you cut kids' hair?</summary><p>Yes, any day we're open. Dee is especially good with first haircuts.</p></details>
+      <details><summary>What if I'm running late?</summary><p>Your chair is held for 10 minutes. Running later than that? Call and we'll fit you in if we can.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Ledger &amp; Lather Barber Co.</h3>
+        <p>Cuts, fades, beards and hot-towel shaves in Tuscaloosa since 2019.</p>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <p>214 Copperhill Street<br>Tuscaloosa, AL 35401<br><a href="tel:+12055550142">(205) 555-0142</a></p>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <p>Tue–Fri 9 am–7 pm<br>Sat 8 am–4 pm<br>Sun &amp; Mon closed</p>
+      </div>
+    </div>
+    <div class="sample-note">
+      <p><strong>Sample website.</strong> Ledger &amp; Lather Barber Co. is a fictional business: its name, people, address, phone number and email are invented for a web design portfolio.</p>
+      <p data-studio-credit hidden></p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn btn-ghost" href="tel:+12055550142">Call</a>
+  <a class="btn btn-primary" href="#book">Book a chair</a>
+</div>
+
+<script>
+(() => {
+  // Menu on phones
+  const toggle = document.querySelector('.nav-toggle'), nav = document.getElementById('site-nav');
+  const setMenu = open => { toggle.setAttribute('aria-expanded', String(open)); nav.classList.toggle('open', open); };
+  toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  nav.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // Open now? In Tuscaloosa's time zone, whatever the visitor's.
+  const HOURS = {0: null, 1: null, 2: [540, 1140], 3: [540, 1140], 4: [540, 1140], 5: [540, 1140], 6: [480, 960]};
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {timeZone: 'America/Chicago', weekday: 'long',
+    year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'})
+    .formatToParts(new Date()).map(p => [p.type, p.value]));
+  const day = DAYS.indexOf(parts.weekday), now = (+parts.hour % 24) * 60 + +parts.minute;
+  const clock = m => { const h = Math.floor(m / 60), mm = m % 60; return (h % 12 || 12) + (mm ? ':' + String(mm).padStart(2, '0') : '') + (h < 12 ? ' am' : ' pm'); };
+  let text = '', open = false;
+  if (HOURS[day] && now >= HOURS[day][0] && now < HOURS[day][1]) { open = true; text = 'Open now · until ' + clock(HOURS[day][1]); }
+  else for (let i = 0; i < 8; i++) {
+    const d = (day + i) % 7, h = HOURS[d];
+    if (h && (i > 0 || now < h[0])) { text = 'Closed now · opens ' + (i === 0 ? 'today' : i === 1 ? 'tomorrow' : DAYS[d]) + ' at ' + clock(h[0]); break; }
+  }
+  document.querySelectorAll('[data-open-status]').forEach(el => { el.classList.toggle('open', open); el.querySelector('span').textContent = text; });
+  const row = document.querySelector(`[data-hours] tr[data-day="${day}"]`); if (row) row.classList.add('today');
+
+  // The booking form: a sample, so nothing is sent anywhere.
+  const today = `${parts.year}-${parts.month}-${parts.day}`;
+  document.querySelectorAll('[data-sample-form]').forEach(form => {
+    form.querySelectorAll('input[type=date]').forEach(input => input.min = today);
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const first = form.elements.name.value.trim().split(/\s+/)[0];
+      const status = form.querySelector('.form-status');
+      status.textContent = `Thanks, ${first}! On the real site, this request goes straight to the shop and you'd get a text to confirm. This is a sample site, so nothing was sent.`;
+      status.hidden = false; status.focus(); form.reset();
+    });
+  });
+})();
+</script>
+<script src="../studio.js" defer></script>
+</body>
+</html>

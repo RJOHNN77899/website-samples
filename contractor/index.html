@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fenwright Home Builders · Remodeling &amp; repairs in Tuscaloosa, AL</title>
+<meta name="description" content="Kitchen and bathroom remodels, decks, additions and storm repairs in Tuscaloosa, Northport and nearby. Free written estimates.">
+<!-- A sample site for a fictional business: kept out of search results. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M14 34L32 18l18 16M20 30v16h24V30' fill='none' stroke='%23fb923c' stroke-width='5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{--slate:#0f172a;--slate-2:#1e293b;--slate-3:#334155;--orange:#c2410c;--orange-dark:#9a3412;--orange-light:#fb923c;--bg:#f8fafc;--white:#fff;--text:#0f172a;--muted:#475569;--line:#e2e8f0;--radius:12px;--max:1160px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--white)}
+h1,h2,h3{line-height:1.12;margin:0 0 .5em;letter-spacing:-.015em;font-weight:800}
+h1{font-size:clamp(2.3rem,5.6vw,3.9rem)}
+h2{font-size:clamp(1.8rem,3.8vw,2.6rem)}
+h3{font-size:1.18rem;letter-spacing:-.005em}
+p{margin:0 0 1em}
+a{color:inherit}
+svg{display:block;max-width:100%}
+.wrap{width:min(100% - 32px,var(--max));margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--orange);color:#fff;padding:8px 14px;border-radius:8px;z-index:100;font-weight:700}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--orange-light);outline-offset:3px}
+.label{display:inline-block;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.on-dark .label{color:var(--orange-light)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;transition:background .15s,transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange-dark)}
+.btn-light{border-color:#cbd5e1;color:inherit;background:transparent}
+.on-dark .btn-light{border-color:#64748b;color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* Top bar + header */
+.topbar{background:var(--slate);color:#cbd5e1;font-size:.9rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding:8px 0;flex-wrap:wrap}
+.topbar a{color:#fff;font-weight:700;text-decoration:none}
+.site-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.logo small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.logo svg{width:38px;height:38px}
+.site-nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.site-nav a{text-decoration:none;font-weight:600;color:var(--slate-3)}
+.site-nav a:hover{color:var(--orange)}
+.header-actions{display:flex;align-items:center;gap:12px}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:46px;height:46px;cursor:pointer;color:var(--slate)}
+.nav-toggle svg{width:22px;height:22px;margin:auto}
+
+/* Hero */
+.hero{background:var(--slate);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(148,163,184,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.07) 1px,transparent 1px);background-size:32px 32px}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:80px 0 88px}
+.hero .lead{font-size:1.18rem;color:#cbd5e1;max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;list-style:none;padding:0;margin:0;color:#e2e8f0;font-weight:600}
+.checks li{display:flex;gap:10px;align-items:flex-start}
+.checks svg{width:20px;height:20px;color:var(--orange-light);flex:none;margin-top:3px}
+.hero-art{background:#111c33;border:1px solid #2b3a55;border-radius:16px;padding:20px}
+
+/* Trust strip */
+.trust{background:var(--bg);border-bottom:1px solid var(--line)}
+.trust ul{display:grid;grid-template-columns:repeat(4,1fr);list-style:none;margin:0;padding:22px 0;gap:16px}
+.trust li{text-align:center}
+.trust b{display:block;font-size:1.5rem;color:var(--slate)}
+.trust span{color:var(--muted);font-size:.92rem}
+
+section{padding:88px 0}
+.section-head{max-width:680px;margin-bottom:42px}
+.section-head p{color:var(--muted);font-size:1.08rem}
+.tint{background:var(--bg)}
+.on-dark{background:var(--slate);color:#fff}
+.on-dark .section-head p{color:#cbd5e1}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column}
+.service .icon{width:48px;height:48px;border-radius:10px;background:#fff1e8;color:var(--orange);display:grid;place-items:center;margin-bottom:16px}
+.service .icon svg{width:26px;height:26px}
+.service p{color:var(--muted);flex:1}
+.service ul{margin:0 0 6px;padding-left:18px;color:var(--slate-3);font-size:.95rem}
+.service a{font-weight:700;color:var(--orange);text-decoration:none;margin-top:10px}
+.service a:hover{text-decoration:underline}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step;list-style:none;padding:0;margin:0}
+.steps li{background:var(--slate-2);border:1px solid var(--slate-3);border-radius:var(--radius);padding:24px;position:relative}
+.steps li::before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;margin-bottom:14px}
+.steps p{color:#cbd5e1;margin:0}
+
+/* Projects */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.project svg{width:100%;height:auto;background:#eef2f7}
+.project div{padding:18px 20px}
+.project p{color:var(--muted);margin:0;font-size:.95rem}
+.project .where{font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:4px}
+
+/* Estimate */
+.estimate{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start}
+.estimate-info ul{list-style:none;padding:0;margin:22px 0}
+.estimate-info li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.estimate-info li svg{width:22px;height:22px;color:var(--orange);flex:none;margin-top:2px}
+.estimate-info a{font-weight:700}
+form.quote{background:#fff;border:1px solid var(--line);box-shadow:0 18px 40px -24px rgba(15,23,42,.35);border-radius:16px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:6px}
+.field.full{grid-column:1/-1}
+label,legend{font-weight:700;font-size:.92rem}
+label small{font-weight:500;color:var(--muted)}
+input,select,textarea{font:inherit;color:var(--text);background:#fff;border:1.5px solid #cbd5e1;border-radius:8px;padding:12px 14px;min-height:48px;width:100%}
+input[type=file]{padding:10px}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--orange);outline:3px solid rgba(194,65,12,.22);outline-offset:0}
+fieldset{grid-column:1/-1;border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px 18px}
+fieldset legend{margin-bottom:8px;width:100%}
+fieldset label{display:flex;align-items:center;gap:8px;font-weight:600}
+fieldset input{width:20px;height:20px;min-height:0;accent-color:var(--orange)}
+form .btn{grid-column:1/-1;justify-self:start}
+.form-status{grid-column:1/-1;background:#ecfdf3;border:1px solid #a7f3c4;color:#14532d;border-radius:8px;padding:14px 16px;margin:0}
+.fineprint{grid-column:1/-1;font-size:.85rem;color:var(--muted);margin:0}
+
+/* Areas + hours */
+.areas{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 14px}
+.chips li{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600}
+.hours{width:100%;border-collapse:collapse}
+.hours th,.hours td{padding:9px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:500}
+.hours td{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today th,.hours tr.today td{color:var(--orange);font-weight:800}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.status{display:inline-flex;align-items:center;gap:9px;font-weight:700;margin-top:14px}
+.status i{width:10px;height:10px;border-radius:50%;background:#94a3b8;display:inline-block}
+.status.open i{background:#16a34a;box-shadow:0 0 0 4px rgba(22,163,74,.18)}
+
+/* FAQ */
+.faq{max-width:820px}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;font-size:1.06rem;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--orange)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:0 0 18px}
+
+/* Footer */
+.site-footer{background:var(--slate);color:#cbd5e1;padding:56px 0 30px;font-size:.95rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:34px}
+.site-footer h3{color:#fff;font-size:1.05rem}
+.site-footer a{color:#fff}
+.sample-note{border-top:1px solid var(--slate-3);padding-top:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.sample-note strong{color:var(--orange-light)}
+[data-studio-credit][hidden]{display:none}
+
+.mobile-cta{display:none}
+
+@media (max-width:980px){
+  .hero-grid,.estimate,.areas{grid-template-columns:1fr}
+  .hero-grid{padding:52px 0 60px;gap:32px}
+  .services,.projects{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .topbar .hide-sm{display:none}
+  .nav-toggle{display:grid}
+  .header-actions .btn{display:none}
+  .site-nav{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);display:none;box-shadow:0 12px 24px -16px rgba(15,23,42,.4)}
+  .site-nav.open{display:block}
+  .site-nav ul{flex-direction:column;gap:0;padding:6px 16px 16px}
+  .site-nav a{display:block;padding:14px 4px;font-size:1.05rem;border-bottom:1px solid var(--line)}
+  section{padding:64px 0}
+  .services,.projects,.steps{grid-template-columns:1fr}
+  .trust ul{grid-template-columns:1fr 1fr}
+  .checks{grid-template-columns:1fr}
+  form.quote{grid-template-columns:1fr;padding:22px}
+  .footer-grid{grid-template-columns:1fr}
+  .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,23,42,.97)}
+  .mobile-cta .btn{flex:1;min-height:50px}
+  .mobile-cta .btn-light{color:#fff;border-color:#64748b}
+  body{padding-bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="hide-sm">Serving Tuscaloosa, Northport and across Tuscaloosa County</span>
+    <span>Storm damage? Call <a href="tel:+12055550163">(205) 555-0163</a></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="#top" aria-label="Fenwright Home Builders, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#0f172a"/><path d="M8 21L20 11l12 10M12 18v12h16V18" fill="none" stroke="#fb923c" stroke-width="3" stroke-linejoin="round"/><path d="M18 30v-6h4v6" fill="none" stroke="#fff" stroke-width="2"/></svg>
+      <span>Fenwright<small>Home Builders</small></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#work">Recent work</a></li>
+        <li><a href="#areas">Service area</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary" href="#estimate">Free estimate</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero on-dark" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label">Remodeling · Repairs · Additions</p>
+        <h1>Home projects done right, and done when we said.</h1>
+        <p class="lead">Kitchens, bathrooms, decks, additions and storm repairs across Tuscaloosa County. You get a written estimate, one crew lead from start to finish, and updates without having to chase them.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#estimate">Get a free estimate</a>
+          <a class="btn btn-light" href="tel:+12055550163">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+            (205) 555-0163</a>
+        </div>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Licensed and insured</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Free written estimates</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>2-year workmanship warranty</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Clean site, every day</li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 420 330" role="img" aria-label="Blueprint-style drawing of a house with measurements">
+          <defs><pattern id="grid" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M14 0H0V14" fill="none" stroke="#1f2d4a" stroke-width="1"/></pattern></defs>
+          <rect width="420" height="330" rx="10" fill="url(#grid)"/>
+          <g fill="none" stroke="#93c5fd" stroke-width="3" stroke-linejoin="round">
+            <path d="M80 160L210 62l130 98"/>
+            <path d="M104 142v126h212V142"/>
+            <rect x="136" y="176" width="54" height="44"/>
+            <path d="M163 176v44M136 198h54"/>
+            <rect x="232" y="196" width="46" height="72"/>
+            <path d="M282 92v-34h22v52"/>
+          </g>
+          <circle cx="268" cy="234" r="3" fill="#93c5fd"/>
+          <g stroke="#fb923c" stroke-width="2" fill="none">
+            <path d="M104 292h212M104 284v16M316 284v16"/>
+            <path d="M360 142v126M352 142h16M352 268h16"/>
+          </g>
+          <g font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#fb923c">
+            <text x="210" y="314" text-anchor="middle">32′-0″</text>
+            <text x="388" y="210" text-anchor="middle" transform="rotate(90 388 210)">14′-6″</text>
+          </g>
+          <g font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="2">
+            <text x="20" y="30">FENWRIGHT · PLAN A-1</text>
+          </g>
+          <path d="M40 270l44-44 10 10-44 44-14 4z" fill="#fb923c"/>
+          <path d="M84 226l6-6 10 10-6 6z" fill="#fdba74"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust">
+    <div class="wrap">
+      <ul>
+        <li><b>48 hrs</b><span>to your written estimate</span></li>
+        <li><b>1 lead</b><span>on your job, start to finish</span></li>
+        <li><b>2 years</b><span>workmanship warranty</span></li>
+        <li><b>Free</b><span>site visits and estimates</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Services</span>
+        <h2 id="services-title">What we build and fix</h2>
+        <p>From a sticking door to a new room on the back of the house. Not sure where your project fits? Ask; if it's not for us, we'll say so and point you to someone good.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h18v10H3zM3 14h18M8 10V4h8v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <h3>Kitchen remodels</h3><p>New layouts, cabinets, counters, tile and lighting, planned around how you actually cook.</p>
+          <a href="#estimate">Plan my kitchen →</a>
+        </article>
+        <article class="service">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Bathroom remodels</h3><p>Walk-in showers, tub swaps, tile, vanities, and grab bars that don't look like an afterthought.</p>
+          <a href="#estimate">Redo my bathroom →</a>
+        </article>
+        <article class="service">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 14h20M4 14v6M20 14v6M12 14v6M3 10h18M6 10V6M18 10V6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Decks &amp; porches</h3><p>Pressure-treated or composite decks, screened porches and covered patios, built to code.</p>
+          <a href="#estimate">Build a deck →</a>
+        </article>
+        <article class="service">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7M5 9.5V20h14V9.5M12 20v-6M9 17h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <h3>Additions</h3><p>Extra bedrooms, sunrooms and garage conversions, with permits and inspections handled for you.</p>
+          <a href="#estimate">Add a room →</a>
+        </article>
+        <article class="service">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <h3>Storm damage repair</h3><p>Roof, siding and fence repairs after a storm. We'll document the damage for your insurance claim.</p>
+          <a href="tel:+12055550163">Call about storm damage →</a>
+        </article>
+        <article class="service">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <h3>Repairs &amp; odd jobs</h3><p>Rotten trim, drywall, doors, flooring patches: the list you've been meaning to get to, in one visit.</p>
+          <a href="#estimate">Send my list →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="on-dark" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">How it works</span>
+        <h2 id="process-title">No surprises, start to finish</h2>
+        <p>The same four steps on every job, big or small.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Tell us about it</h3><p>Use the form or call. Photos help us give you a ballpark straight away.</p></li>
+        <li><h3>Free site visit</h3><p>We measure, look behind the obvious, and talk through options and budget.</p></li>
+        <li><h3>Written estimate</h3><p>A fixed, itemised price and a schedule within 48 hours. No pressure to sign.</p></li>
+        <li><h3>Build &amp; walkthrough</h3><p>Your crew lead sends updates as we go, and we walk the finished job with you.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="work" class="tint" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Recent work</span>
+        <h2 id="work-title">A few jobs from this year</h2>
+      </div>
+      <div class="projects">
+        <article class="project">
+          <svg viewBox="0 0 360 200" role="img" aria-label="Drawing of a kitchen with an island and pendant lights"><rect width="360" height="200" fill="#eef2f7"/><rect x="30" y="40" width="300" height="70" fill="#cbd5e1"/><g fill="#94a3b8"><rect x="40" y="50" width="60" height="50"/><rect x="110" y="50" width="60" height="50"/><rect x="190" y="50" width="60" height="50"/><rect x="260" y="50" width="60" height="50"/></g><rect x="70" y="130" width="220" height="50" fill="#0f172a"/><rect x="64" y="124" width="232" height="8" fill="#e2e8f0"/><g stroke="#475569" stroke-width="2"><path d="M130 0v28M230 0v28"/></g><g fill="#fb923c"><circle cx="130" cy="34" r="8"/><circle cx="230" cy="34" r="8"/></g></svg>
+          <div><p class="where">Northport</p><h3>Open-plan kitchen</h3><p>Wall removed, new island, quartz counters and pendant lighting. Six weeks.</p></div>
+        </article>
+        <article class="project">
+          <svg viewBox="0 0 360 200" role="img" aria-label="Drawing of a walk-in shower with tile"><rect width="360" height="200" fill="#eef2f7"/><g stroke="#cbd5e1" stroke-width="2"><path d="M40 0v200M80 0v200M120 0v200M160 0v200M0 40h200M0 80h200M0 120h200M0 160h200"/></g><rect x="200" y="20" width="10" height="180" fill="#94a3b8" opacity=".6"/><path d="M60 20h40v10" stroke="#475569" stroke-width="5" fill="none"/><g fill="#93c5fd"><circle cx="90" cy="48" r="3"/><circle cx="80" cy="60" r="3"/><circle cx="96" cy="66" r="3"/></g><rect x="240" y="110" width="90" height="70" rx="6" fill="#0f172a"/><rect x="250" y="96" width="70" height="14" rx="4" fill="#e2e8f0"/><circle cx="285" cy="80" r="14" fill="none" stroke="#fb923c" stroke-width="4"/></svg>
+          <div><p class="where">Tuscaloosa</p><h3>Tub to walk-in shower</h3><p>Curbless shower, porcelain tile, a bench and grab bars. Twelve days.</p></div>
+        </article>
+        <article class="project">
+          <svg viewBox="0 0 360 200" role="img" aria-label="Drawing of a covered back porch with railings"><rect width="360" height="200" fill="#eef2f7"/><path d="M20 70L180 20l160 50z" fill="#475569"/><rect x="40" y="70" width="280" height="10" fill="#0f172a"/><g fill="#94a3b8"><rect x="50" y="80" width="10" height="90"/><rect x="175" y="80" width="10" height="90"/><rect x="300" y="80" width="10" height="90"/></g><rect x="30" y="168" width="300" height="12" fill="#c2410c"/><g stroke="#64748b" stroke-width="3"><path d="M60 130h115M185 130h115"/><path d="M75 130v38M90 130v38M105 130v38M120 130v38M135 130v38M150 130v38M200 130v38M215 130v38M230 130v38M245 130v38M260 130v38M275 130v38"/></g></svg>
+          <div><p class="where">Cottondale</p><h3>Covered back porch</h3><p>Composite decking, a new roofline tied into the house, and ceiling fans. Three weeks.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="estimate" aria-labelledby="estimate-title">
+    <div class="wrap estimate">
+      <div class="estimate-info">
+        <span class="label">Free estimate</span>
+        <h2 id="estimate-title">Tell us about your project</h2>
+        <p>We reply within one working day to set up a visit. Estimates are free, written and itemised.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg><span>Rather talk? <a href="tel:+12055550163">(205) 555-0163</a></span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><a href="mailto:estimates@fenwright.example">estimates@fenwright.example</a></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Office: Mon–Fri 7 am–5 pm. Storm emergencies: call any time.</span></li>
+        </ul>
+      </div>
+      <form class="quote" data-sample-form>
+        <div class="field"><label for="q-name">Name</label><input id="q-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        <div class="field"><label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="q-zip">ZIP code</label><input id="q-zip" name="zip" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required></div>
+        <div class="field"><label for="q-type">Project</label>
+          <select id="q-type" name="project" required><option value="">Choose one</option><option>Kitchen remodel</option><option>Bathroom remodel</option><option>Deck or porch</option><option>Addition</option><option>Storm damage repair</option><option>Repairs and odd jobs</option><option>Something else</option></select></div>
+        <div class="field"><label for="q-when">When would you like to start?</label>
+          <select id="q-when" name="timeline"><option>As soon as possible</option><option>In the next 1–3 months</option><option>In 3–6 months</option><option>Just getting ideas</option></select></div>
+        <div class="field full"><label for="q-details">Tell us about it</label><textarea id="q-details" name="details" placeholder="What you'd like done, rough size, anything we should know." required></textarea></div>
+        <div class="field full"><label for="q-photos">Photos <small>(optional, they help)</small></label><input id="q-photos" name="photos" type="file" accept="image/*" multiple></div>
+        <fieldset>
+          <legend>Best way to reach you</legend>
+          <label><input type="radio" name="contact" value="call" checked> Call</label>
+          <label><input type="radio" name="contact" value="text"> Text</label>
+          <label><input type="radio" name="contact" value="email"> Email</label>
+        </fieldset>
+        <button class="btn btn-primary" type="submit">Request my free estimate</button>
+        <p class="form-status" role="status" tabindex="-1" hidden></p>
+        <p class="fineprint">We'll only use your details to reply about this project.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="areas" class="tint" aria-labelledby="areas-title">
+    <div class="wrap areas">
+      <div class="card">
+        <span class="label">Service area</span>
+        <h2 id="areas-title">Across Tuscaloosa County</h2>
+        <ul class="chips"><li>Tuscaloosa</li><li>Northport</li><li>Cottondale</li><li>Coker</li><li>Lake Tuscaloosa</li><li>Brookwood</li></ul>
+        <p>Outside these? Call: for bigger projects, we often travel a little further.</p>
+        <a class="btn btn-primary" href="#estimate">Get a free estimate</a>
+      </div>
+      <div class="card">
+        <h3>Office hours</h3>
+        <table class="hours" data-hours aria-label="Office hours">
+          <tr data-day="1"><th scope="row">Monday</th><td>7 am – 5 pm</td></tr>
+          <tr data-day="2"><th scope="row">Tuesday</th><td>7 am – 5 pm</td></tr>
+          <tr data-day="3"><th scope="row">Wednesday</th><td>7 am – 5 pm</td></tr>
+          <tr data-day="4"><th scope="row">Thursday</th><td>7 am – 5 pm</td></tr>
+          <tr data-day="5"><th scope="row">Friday</th><td>7 am – 5 pm</td></tr>
+          <tr data-day="6"><th scope="row">Saturday</th><td>By appointment</td></tr>
+          <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+        </table>
+        <p class="status" data-open-status><i></i><span>Mon–Fri 7 am–5 pm</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq">
+      <div class="section-head">
+        <span class="label">FAQ</span>
+        <h2 id="faq-title">Questions homeowners ask us</h2>
+      </div>
+      <details><summary>Is the estimate really free?</summary><p>Yes. The site visit and the written estimate cost nothing, and there's no pressure to sign.</p></details>
+      <details><summary>Do you pull permits?</summary><p>Yes. When a job needs a permit, we apply for it and book the inspections, and the cost is shown in your estimate.</p></details>
+      <details><summary>How does payment work?</summary><p>Small jobs are paid on completion. Larger projects have a deposit and payments tied to finished stages, all written into the estimate before you sign.</p></details>
+      <details><summary>Can you work with my insurance after a storm?</summary><p>We document the damage with photos and measurements and can meet your adjuster on site. Your claim stays between you and your insurer.</p></details>
+      <details><summary>What does the warranty cover?</summary><p>Our workmanship, for two years from the walkthrough. Materials carry their makers' warranties, which we register for you.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Fenwright Home Builders</h3>
+        <p>Remodeling, repairs and additions across Tuscaloosa County. Licensed and insured.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:+12055550163">(205) 555-0163</a><br><a href="mailto:estimates@fenwright.example">estimates@fenwright.example</a></p>
+      </div>
+      <div>
+        <h3>Office hours</h3>
+        <p>Mon–Fri 7 am–5 pm<br>Saturday by appointment<br>Storm emergencies: any time</p>
+      </div>
+    </div>
+    <div class="sample-note">
+      <p><strong>Sample website.</strong> Fenwright Home Builders is a fictional business: its name, projects, phone number and email are invented for a web design portfolio.</p>
+      <p data-studio-credit hidden></p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn btn-light" href="tel:+12055550163">Call</a>
+  <a class="btn btn-primary" href="#estimate">Free estimate</a>
+</div>
+
+<script>
+(() => {
+  const toggle = document.querySelector('.nav-toggle'), nav = document.getElementById('site-nav');
+  const setMenu = open => { toggle.setAttribute('aria-expanded', String(open)); nav.classList.toggle('open', open); };
+  toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  nav.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // Office open now? In Tuscaloosa's time zone, whatever the visitor's.
+  const HOURS = {0: null, 1: [420, 1020], 2: [420, 1020], 3: [420, 1020], 4: [420, 1020], 5: [420, 1020], 6: null};
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {timeZone: 'America/Chicago', weekday: 'long',
+    year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'})
+    .formatToParts(new Date()).map(p => [p.type, p.value]));
+  const day = DAYS.indexOf(parts.weekday), now = (+parts.hour % 24) * 60 + +parts.minute;
+  const clock = m => { const h = Math.floor(m / 60), mm = m % 60; return (h % 12 || 12) + (mm ? ':' + String(mm).padStart(2, '0') : '') + (h < 12 ? ' am' : ' pm'); };
+  let text = '', open = false;
+  if (HOURS[day] && now >= HOURS[day][0] && now < HOURS[day][1]) { open = true; text = 'Office open now · until ' + clock(HOURS[day][1]); }
+  else for (let i = 0; i < 8; i++) {
+    const d = (day + i) % 7, h = HOURS[d];
+    if (h && (i > 0 || now < h[0])) { text = 'Office closed · opens ' + (i === 0 ? 'today' : i === 1 ? 'tomorrow' : DAYS[d]) + ' at ' + clock(h[0]); break; }
+  }
+  document.querySelectorAll('[data-open-status]').forEach(el => { el.classList.toggle('open', open); el.querySelector('span').textContent = text; });
+  const row = document.querySelector(`[data-hours] tr[data-day="${day}"]`); if (row) row.classList.add('today');
+
+  // The estimate form: a sample, so nothing (photos included) is sent anywhere.
+  document.querySelectorAll('[data-sample-form]').forEach(form => {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const first = form.elements.name.value.trim().split(/\s+/)[0];
+      const status = form.querySelector('.form-status');
+      status.textContent = `Thanks, ${first}! On the real site, your request and photos go straight to the office and you'd hear back within one working day. This is a sample site, so nothing was sent.`;
+      status.hidden = false; status.focus(); form.reset();
+    });
+  });
+})();
+</script>
+<script src="../studio.js" defer></script>
+</body>
+</html>
